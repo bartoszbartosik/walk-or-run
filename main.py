@@ -10,43 +10,42 @@ def main():
     width = 0.5
     depth = 0.3
 
+    # Constants
     a = width * height
     b = width * depth
-
 
     ########################
     # ENVIRONMENT SETTINGS #
     ########################
+    # Gravitational acceleration
     G = -9.81
+
+    # Rain angle
     phi = -20
 
     # Distance to travel
     d = 20
 
-    #######################
-    # SIMULATION SETTINGS #
-    #######################
-    dt = 0.1
-    t = np.arange(0, 20, dt)
+    # Velocity domain
     dv = 0.1
     v = np.arange(0, 20, dv)
-
-    V_t = []
     V_v = []
 
+    ##################
+    # RESULTS & PLOT #
+    ##################
+    # Volume function
+    volume = lambda v: abs(a*d - 1/2*a*G*(d/v)**2*np.tan(np.deg2rad(phi))) - 1/2*b*G*(d/v)**2
+
+    # Compute volume with respect to velocity
     for v_i in v:
         if v_i != 0:
-            vol = abs(a*d - 1/2*a*G*(d/v_i)**2*np.tan(np.deg2rad(phi))) - 1/2*b*G*(d/v_i)**2
+            vol = volume(v_i)
         else:
             vol = float('inf')
         V_v.append(vol)
 
-    v_min = min(V_v)
-
-    for t_i in t:
-            vol = abs(a*v_min*t_i - 1/2*a*G*t_i**2*np.tan(np.deg2rad(phi))) - 1/2*b*G*t_i**2
-            V_t.append(vol)
-
+    # Visualize data
     plt.plot(v, V_v, c='0.3')
     plt.xlabel('velocity [m/s]')
     plt.ylabel('volume [m^3]')
