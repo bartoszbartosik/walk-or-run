@@ -23,6 +23,9 @@ def main():
     # Rain angle
     phi = -20
 
+    # Rain velocity
+    v_r = -9
+
     # Distance to travel
     d = 20
 
@@ -35,7 +38,8 @@ def main():
     # RESULTS & PLOT #
     ##################
     # Volume function
-    volume = lambda v: abs(a*d - 1/2*a*G*(d/v)**2*np.tan(np.deg2rad(phi))) - 1/2*b*G*(d/v)**2
+    # volume = lambda v: abs(a*d - 1/2*a*G*(d/v)**2*np.tan(np.deg2rad(phi))) - 1/2*b*G*(d/v)**2
+    volume = lambda v: abs(a*d - a*v_r*(d/v)*np.sin(np.deg2rad(phi))) - b*v_r*(d/v)*np.cos(np.deg2rad(phi))
 
     # Compute volume with respect to velocity
     for v_i in v:
@@ -47,8 +51,8 @@ def main():
 
     # Visualize data
     plt.plot(v, V_v, c='0.3')
-    plt.xlabel('velocity [m/s]')
-    plt.ylabel('volume [m^3]')
+    plt.xlabel('v [m/s]')
+    plt.ylabel('V [m^3]')
     plt.grid()
     plt.ylim(0, 200)
     plt.show()
