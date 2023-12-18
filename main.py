@@ -21,7 +21,7 @@ def main():
     G = -9.81
 
     # Rain angle
-    phi = -20
+    phi = -0
 
     # Rain velocity
     v_r = -9
@@ -55,6 +55,7 @@ def main():
     plt.ylabel('V [m^3]')
     plt.grid()
     plt.ylim(0, 200)
+    plt.savefig('images/plot-no-wind')
     plt.show()
 
 if __name__ == '__main__':
