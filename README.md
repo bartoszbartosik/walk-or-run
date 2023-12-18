@@ -73,7 +73,7 @@ The plot below shows the amount of rain falling in environment with following pa
   - v_r = $-9 \text{ } \frac{m}{s}$
   - phi = $0^{\circ}$
   - d = $20 \text{ } m$
-  - 
+
 <p align="center"><img src="images/plot-no-wind.png" width="500" class="center"/></p>
 
  Conclusion? Run as fast as you can! The faster you sprint, the drier you and your shopping will get home.
