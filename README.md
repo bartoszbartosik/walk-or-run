@@ -18,6 +18,8 @@ b = width \cdot depth
 
 Figure below is a conceptual model explaining how a small increment of rain volume is determined as sum of subvolumes related to both your and rain movement along $x$ and $y$ axis directions.
 
+<p align="center"><img src="images/model.png" width="500" class="center"/></p>
+
 It can be written, that:
 ```math
 dV = adx_v - adx_r - bdy \qquad \vert : dt
@@ -71,12 +73,15 @@ The plot below shows the amount of rain falling in environment with following pa
   - v_r = $-9 \text{ } \frac{m}{s}$
   - phi = $0^{\circ}$
   - d = $20 \text{ } m$
+  - 
+<p align="center"><img src="images/plot-no-wind.png" width="500" class="center"/></p>
 
  Conclusion? Run as fast as you can! The faster you sprint, the drier you and your shopping will get home.
 
  ### Rain with wind
  What about a scenario where the rain falls with some non-zero angle? For this purpose, the same parameters as before have been used, but the $\phi$ has been set to $-20^{\circ}$. This situation, with respect to the figure above, means that the rain horizontal velocity direction is heading the direction of your house door.
  The plot below answers what happens in such circumstances:
+<p align="center"><img src="images/plot-wind.png" width="500" class="center"/></p>
 
 Turns out, that there is an optimal speed with which you can run to get home the driest possible! In practice, however, it may be difficult to make it remain at this particular value (especially when you run with heavy full shopping bags) and therefore, seems like it is the best to run as fast as you can.
 
