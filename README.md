@@ -85,7 +85,20 @@ The plot below shows the amount of rain falling in environment with following pa
 
 Turns out, that there is an optimal speed with which you can run to get home the driest possible! Let's investigate what is it exactly...
 
-The last volume equation contains a modulus, which changes the function form depending on the sign of the modulus contents. From the plot it can be visible, that the function loses its continuity in the same point where the 
+From the plot it can be visible, that the function is not differentiable in the same point where its minumum occurs. This is related to the modulus in the volume equation, or more precisely, to such value of $v = v_{min}$ for which the value of modulus is equal $0$:
+```math
+ad - a\frac{d}{v_{min}}v_r\cos(\phi) = 0
+```
+```math
+1 - \frac{1}{v_{min}}v_r\cos(\phi) = 0 \qquad \vert \cdot v_{min}
+```
+```math
+v_{min} - v_r\cos(\phi) = 0
+```
+```math
+v_{min} =  v_r\cos(\phi)
+```
+The optimal velocity to run with, when the rain direction is the same as yours, is the same as the rain's horizontal speed. It actually makes sense - if you run as fast as the raindrops behind and in front of you, they'll never get you. The only ones that will are these falling from above on the top of your head, and therefore, the function value for $v_{min}$ is greater than 0.
 
 In practice, however, it may be difficult to make it remain at this particular value (especially when you run with heavy full shopping bags) and therefore, seems like it is the best to run as fast as you can.
 
