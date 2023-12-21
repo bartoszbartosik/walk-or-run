@@ -83,5 +83,9 @@ The plot below shows the amount of rain falling in environment with following pa
  The plot below answers what happens in such circumstances:
 <p align="center"><img src="images/plot-wind.png" width="500" class="center"/></p>
 
-Turns out, that there is an optimal speed with which you can run to get home the driest possible! In practice, however, it may be difficult to make it remain at this particular value (especially when you run with heavy full shopping bags) and therefore, seems like it is the best to run as fast as you can.
+Turns out, that there is an optimal speed with which you can run to get home the driest possible! Let's investigate what is it exactly...
+
+The last volume equation contains a modulus, which changes the function form depending on the sign of the modulus contents. From the plot it can be visible, that the function loses its continuity in the same point where the 
+
+In practice, however, it may be difficult to make it remain at this particular value (especially when you run with heavy full shopping bags) and therefore, seems like it is the best to run as fast as you can.
 
